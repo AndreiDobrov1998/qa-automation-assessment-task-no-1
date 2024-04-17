@@ -1,4 +1,4 @@
-import { Photo } from "../dto/photos.dto";
+import { Photo } from "../dto/photo.dto";
 
 export function filterByAlbumNumber(photos: Array<Photo>, albumId: number) {
     return photos.filter((photos: Photo) => photos.albumId === 100)

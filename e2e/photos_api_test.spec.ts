@@ -1,5 +1,5 @@
 import {test, expect} from "@playwright/test"
-import { Photo } from "../dto/photos.dto"
+import { Photo } from "../dto/photo.dto"
 import { filterByAlbumNumber, filterByTitleInclude } from "../helper/responseBodyTransform"
 
 
