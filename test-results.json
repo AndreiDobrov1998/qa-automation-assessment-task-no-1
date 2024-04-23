@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 2
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "reporter": [
@@ -35,7 +35,7 @@
       {
         "outputDir": "/Users/adobrov/PW/AutomatedPojoPW/test-results",
         "repeatEach": 1,
-        "retries": 2,
+        "retries": 0,
         "id": "chromium",
         "name": "chromium",
         "testDir": "/Users/adobrov/PW/AutomatedPojoPW/e2e",
@@ -48,7 +48,7 @@
       {
         "outputDir": "/Users/adobrov/PW/AutomatedPojoPW/test-results",
         "repeatEach": 1,
-        "retries": 2,
+        "retries": 0,
         "id": "firefox",
         "name": "firefox",
         "testDir": "/Users/adobrov/PW/AutomatedPojoPW/e2e",
@@ -61,7 +61,7 @@
       {
         "outputDir": "/Users/adobrov/PW/AutomatedPojoPW/test-results",
         "repeatEach": 1,
-        "retries": 2,
+        "retries": 0,
         "id": "webkit",
         "name": "webkit",
         "testDir": "/Users/adobrov/PW/AutomatedPojoPW/e2e",
@@ -75,7 +75,7 @@
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.43.1",
-    "workers": 2,
+    "workers": 1,
     "webServer": null
   },
   "suites": [
@@ -100,12 +100,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 175,
+                  "duration": 185,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-04-22T19:42:54.087Z",
+                  "startTime": "2024-04-23T07:30:00.694Z",
                   "attachments": []
                 }
               ],
@@ -114,7 +114,7 @@
           ],
           "id": "e6cd38dae103a44b08b9-5a7e7eea9f7512c2b6dd",
           "file": "photos_api_builder.spec.ts",
-          "line": 5,
+          "line": 6,
           "column": 5
         },
         {
@@ -130,14 +130,18 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 0,
                   "status": "passed",
-                  "duration": 529,
+                  "duration": 399,
                   "errors": [],
-                  "stdout": [],
+                  "stdout": [
+                    {
+                      "text": "5001\n"
+                    }
+                  ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-04-22T19:42:54.085Z",
+                  "startTime": "2024-04-23T07:30:00.886Z",
                   "attachments": []
                 }
               ],
@@ -146,7 +150,7 @@
           ],
           "id": "e6cd38dae103a44b08b9-63d0222f596e43a8b1d2",
           "file": "photos_api_builder.spec.ts",
-          "line": 11,
+          "line": 12,
           "column": 5
         },
         {
@@ -164,12 +168,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 214,
+                  "duration": 331,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-04-22T19:42:54.269Z",
+                  "startTime": "2024-04-23T07:30:01.288Z",
                   "attachments": []
                 }
               ],
@@ -178,11 +182,139 @@
           ],
           "id": "e6cd38dae103a44b08b9-9963df1b63d3561be745",
           "file": "photos_api_builder.spec.ts",
-          "line": 27,
+          "line": 31,
           "column": 5
         },
         {
           "title": "Successfull Post with no URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 519,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-04-23T07:30:01.624Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6cd38dae103a44b08b9-73d7cbe9d6589b46306f",
+          "file": "photos_api_builder.spec.ts",
+          "line": 47,
+          "column": 5
+        },
+        {
+          "title": "Successfull Post with no Album and URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 292,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-04-23T07:30:02.146Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6cd38dae103a44b08b9-5364a10f2e99c9d292aa",
+          "file": "photos_api_builder.spec.ts",
+          "line": 63,
+          "column": 5
+        },
+        {
+          "title": "Successfull Post only with Id",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 290,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-04-23T07:30:02.441Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6cd38dae103a44b08b9-c2dda7e9d3525a9ff8b8",
+          "file": "photos_api_builder.spec.ts",
+          "line": 78,
+          "column": 5
+        },
+        {
+          "title": "Successfull Delete with predefined builded Id",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 237,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-04-23T07:30:02.734Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6cd38dae103a44b08b9-c7e42606fb6d162528f7",
+          "file": "photos_api_builder.spec.ts",
+          "line": 92,
+          "column": 5
+        },
+        {
+          "title": "404 for Inexistent Photo",
           "ok": true,
           "tags": [],
           "tests": [
@@ -201,135 +333,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-04-22T19:42:54.485Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6cd38dae103a44b08b9-73d7cbe9d6589b46306f",
-          "file": "photos_api_builder.spec.ts",
-          "line": 42,
-          "column": 5
-        },
-        {
-          "title": "Successfull Post with no Album and URL",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 196,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-04-22T19:42:54.622Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6cd38dae103a44b08b9-5364a10f2e99c9d292aa",
-          "file": "photos_api_builder.spec.ts",
-          "line": 57,
-          "column": 5
-        },
-        {
-          "title": "Successfull Post only with Id",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 186,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-04-22T19:42:54.820Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6cd38dae103a44b08b9-c2dda7e9d3525a9ff8b8",
-          "file": "photos_api_builder.spec.ts",
-          "line": 71,
-          "column": 5
-        },
-        {
-          "title": "Successfull Delete with predefined builded Id",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 433,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-04-22T19:42:54.924Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6cd38dae103a44b08b9-c7e42606fb6d162528f7",
-          "file": "photos_api_builder.spec.ts",
-          "line": 84,
-          "column": 5
-        },
-        {
-          "title": "404 for Inexistent Photo",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 76,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-04-22T19:42:55.010Z",
+                  "startTime": "2024-04-23T07:30:02.975Z",
                   "attachments": []
                 }
               ],
@@ -338,519 +342,7 @@
           ],
           "id": "e6cd38dae103a44b08b9-061ca3d6d7d1fed38c02",
           "file": "photos_api_builder.spec.ts",
-          "line": 95,
-          "column": 5
-        },
-        {
-          "title": "Suuccessfull get",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 99,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-04-22T19:42:55.378Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6cd38dae103a44b08b9-db9d9d051c7f0aeb6acd",
-          "file": "photos_api_builder.spec.ts",
-          "line": 5,
-          "column": 5
-        },
-        {
-          "title": "Successfull Post with all params",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "status": "passed",
-                  "duration": 476,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-04-22T19:42:55.541Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6cd38dae103a44b08b9-4c69327a2af42ff30de7",
-          "file": "photos_api_builder.spec.ts",
-          "line": 11,
-          "column": 5
-        },
-        {
-          "title": "Successfull Post with no Thumbnail Url",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 193,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-04-22T19:42:55.483Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6cd38dae103a44b08b9-e215f7684a2d38191813",
-          "file": "photos_api_builder.spec.ts",
-          "line": 27,
-          "column": 5
-        },
-        {
-          "title": "Successfull Post with no URL",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 191,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-04-22T19:42:55.679Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6cd38dae103a44b08b9-8b2efa764bc0c4cf48c4",
-          "file": "photos_api_builder.spec.ts",
-          "line": 42,
-          "column": 5
-        },
-        {
-          "title": "Successfull Post with no Album and URL",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 189,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-04-22T19:42:55.872Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6cd38dae103a44b08b9-e5e7f5a36e4300c81028",
-          "file": "photos_api_builder.spec.ts",
-          "line": 57,
-          "column": 5
-        },
-        {
-          "title": "Successfull Post only with Id",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "status": "passed",
-                  "duration": 191,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-04-22T19:42:56.024Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6cd38dae103a44b08b9-cdf1000d41ea3e2b1c22",
-          "file": "photos_api_builder.spec.ts",
-          "line": 71,
-          "column": 5
-        },
-        {
-          "title": "Successfull Delete with predefined builded Id",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 191,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-04-22T19:42:56.064Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6cd38dae103a44b08b9-34f84116fa253be662dd",
-          "file": "photos_api_builder.spec.ts",
-          "line": 84,
-          "column": 5
-        },
-        {
-          "title": "404 for Inexistent Photo",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "status": "passed",
-                  "duration": 67,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-04-22T19:42:56.218Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6cd38dae103a44b08b9-7d292059e9d3d08f0a2d",
-          "file": "photos_api_builder.spec.ts",
-          "line": 95,
-          "column": 5
-        },
-        {
-          "title": "Suuccessfull get",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 4,
-                  "status": "passed",
-                  "duration": 96,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-04-22T19:42:56.473Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6cd38dae103a44b08b9-5610097511cbc8bd31f4",
-          "file": "photos_api_builder.spec.ts",
-          "line": 5,
-          "column": 5
-        },
-        {
-          "title": "Successfull Post with all params",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 5,
-                  "status": "passed",
-                  "duration": 227,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-04-22T19:42:56.528Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6cd38dae103a44b08b9-d59204dcd90990fc9802",
-          "file": "photos_api_builder.spec.ts",
-          "line": 11,
-          "column": 5
-        },
-        {
-          "title": "Successfull Post with no Thumbnail Url",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 4,
-                  "status": "passed",
-                  "duration": 450,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-04-22T19:42:56.575Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6cd38dae103a44b08b9-d2dc423bcc5b54dda469",
-          "file": "photos_api_builder.spec.ts",
-          "line": 27,
-          "column": 5
-        },
-        {
-          "title": "Successfull Post with no URL",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 5,
-                  "status": "passed",
-                  "duration": 186,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-04-22T19:42:56.762Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6cd38dae103a44b08b9-5387e385b2b7ad8b0a8e",
-          "file": "photos_api_builder.spec.ts",
-          "line": 42,
-          "column": 5
-        },
-        {
-          "title": "Successfull Post with no Album and URL",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 5,
-                  "status": "passed",
-                  "duration": 188,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-04-22T19:42:56.950Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6cd38dae103a44b08b9-5ab374d40959a36dfe87",
-          "file": "photos_api_builder.spec.ts",
-          "line": 57,
-          "column": 5
-        },
-        {
-          "title": "Successfull Post only with Id",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 4,
-                  "status": "passed",
-                  "duration": 203,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-04-22T19:42:57.029Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6cd38dae103a44b08b9-c0d9dc3f37896addf90a",
-          "file": "photos_api_builder.spec.ts",
-          "line": 71,
-          "column": 5
-        },
-        {
-          "title": "Successfull Delete with predefined builded Id",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 5,
-                  "status": "passed",
-                  "duration": 185,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-04-22T19:42:57.141Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6cd38dae103a44b08b9-b88fa599e65e412ff133",
-          "file": "photos_api_builder.spec.ts",
-          "line": 84,
-          "column": 5
-        },
-        {
-          "title": "404 for Inexistent Photo",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 4,
-                  "status": "passed",
-                  "duration": 62,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-04-22T19:42:57.234Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e6cd38dae103a44b08b9-2e51e8625c773372d3f2",
-          "file": "photos_api_builder.spec.ts",
-          "line": 95,
+          "line": 103,
           "column": 5
         }
       ]
@@ -874,14 +366,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 0,
                   "status": "passed",
-                  "duration": 93,
+                  "duration": 159,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-04-22T19:42:55.088Z",
+                  "startTime": "2024-04-23T07:30:03.418Z",
                   "attachments": []
                 }
               ],
@@ -892,79 +384,15 @@
           "file": "photos_api_test.spec.ts",
           "line": 6,
           "column": 5
-        },
-        {
-          "title": "Asert Success of Photos API",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 86,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-04-22T19:42:56.259Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "0ef01a4c63fb46321ef0-ccfdf2cb50c5e88b9a78",
-          "file": "photos_api_test.spec.ts",
-          "line": 6,
-          "column": 5
-        },
-        {
-          "title": "Asert Success of Photos API",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 4,
-                  "status": "passed",
-                  "duration": 91,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-04-22T19:42:57.299Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "0ef01a4c63fb46321ef0-ad8da9ed441741a587cb",
-          "file": "photos_api_test.spec.ts",
-          "line": 6,
-          "column": 5
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-04-22T19:42:53.888Z",
-    "duration": 3509.879,
-    "expected": 27,
+    "startTime": "2024-04-23T07:30:00.504Z",
+    "duration": 3083.9610000000002,
+    "expected": 9,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

@@ -7,10 +7,5 @@ export class Photo {
     thumbnailUrl?: string;
 
     constructor() {
-        this.loadAsync();
     }
-
-    private loadAsync = async() => {
-        this.id = await getBiggestId() + 1
-    };
 }

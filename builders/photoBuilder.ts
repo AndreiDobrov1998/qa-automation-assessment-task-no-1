@@ -1,10 +1,16 @@
+import { getBiggestId } from "../helper/responseBodyTransform"
 import { Photo } from "./photo"
 
 export class PhotoBuilder {
-    photo: Photo
-    
+    private photo: Photo
     constructor() {
-        this.photo = new Photo()
+        this.photo = new Photo();
+    }
+
+    addId(id: number){
+        this.photo.id = id;
+        
+        return this
     }
 
     addAlbumId(albumId: number){

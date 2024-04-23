@@ -1,5 +1,6 @@
 import {test, expect} from "@playwright/test"
 import { PhotoBuilder } from "../builders/photoBuilder"
+import { getBiggestId } from "../helper/responseBodyTransform"
 
 
 test('Suuccessfull get', async ({ request }) => {
@@ -9,12 +10,15 @@ test('Suuccessfull get', async ({ request }) => {
 })
 
 test('Successfull Post with all params', async ({ request }) => {
-    const photo = new PhotoBuilder()
+    const photo =  new PhotoBuilder()
+                        .addId(await getBiggestId() + 1)     
                         .addAlbumId(2)
                         .addThumbnailUrl('https://via.placeholder.com/150/771796')
                         .addURL('https://via.placeholder.com/600/771796')
                         .build()
-    const response = await request.post('https://jsonplaceholder.typicode.com/photos/',{
+
+    console.log(photo.id)
+    const response = await request.post('https://jsonplaceholder.typicode.com/photos',{
         data: photo
     })
     const photoResp = await response.json()
@@ -26,6 +30,7 @@ test('Successfull Post with all params', async ({ request }) => {
 
 test('Successfull Post with no Thumbnail Url', async ({ request }) => {
     const photo = new PhotoBuilder()
+                        .addId(await getBiggestId() + 1)    
                         .addAlbumId(2)
                         .addURL('https://via.placeholder.com/600/771796')
                         .build()
@@ -41,6 +46,7 @@ test('Successfull Post with no Thumbnail Url', async ({ request }) => {
 
 test('Successfull Post with no URL', async ({ request }) => {
     const photo = new PhotoBuilder()
+                        .addId(await getBiggestId() + 1) 
                         .addAlbumId(2)
                         .addThumbnailUrl('https://via.placeholder.com/150/771796')
                         .build()
@@ -56,6 +62,7 @@ test('Successfull Post with no URL', async ({ request }) => {
 
 test('Successfull Post with no Album and URL', async ({ request }) => {
     const photo = new PhotoBuilder()
+                        .addId(await getBiggestId() + 1) 
                         .addThumbnailUrl('https://via.placeholder.com/150/771796')
                         .build()
     const response = await request.post('https://jsonplaceholder.typicode.com/photos/',{
@@ -70,6 +77,7 @@ test('Successfull Post with no Album and URL', async ({ request }) => {
 
 test('Successfull Post only with Id', async ({ request }) => {
     const photo = new PhotoBuilder()
+                        .addId(await getBiggestId() + 1) 
                         .build()
     const response = await request.post('https://jsonplaceholder.typicode.com/photos/',{
         data: photo
@@ -83,8 +91,8 @@ test('Successfull Post only with Id', async ({ request }) => {
 
 test('Successfull Delete with predefined builded Id', async ({ request }) => {
     const photo = new PhotoBuilder()
+                        .addId(1) 
                         .build()
-    photo.id = 1
     const response = await request.delete('https://jsonplaceholder.typicode.com/photos/' + photo.id)
     const photoResp = await response.json()
 
@@ -94,10 +102,11 @@ test('Successfull Delete with predefined builded Id', async ({ request }) => {
 
 test('404 for Inexistent Photo', async ({ request }) => {
     const photo = new PhotoBuilder()
+                        .addId(5005) 
                         .build()
     const response = await request.get('https://jsonplaceholder.typicode.com/photos/' + photo.id)
     const photoResp = await response.json()
 
     expect(response.ok).toBeTruthy()
-    expect(response.status()).toBe(404)
+    expect(response.status()).toBe(404) 
 })
